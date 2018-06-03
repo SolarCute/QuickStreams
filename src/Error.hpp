@@ -358,6 +358,7 @@ public:
 
 }
 
+void __register_quickstreams_qml_error_types();
 Q_DECLARE_METATYPE(quickstreams::exception::Exception*)
 Q_DECLARE_METATYPE(quickstreams::exception::JsException*)
 Q_DECLARE_METATYPE(quickstreams::exception::BadTypeId*)

@@ -129,3 +129,5 @@ public:
 }} // quickstreams::qml
 
 Q_DECLARE_METATYPE(quickstreams::qml::QmlStream*)
+
+void __register_quickstreams_qml_stream();

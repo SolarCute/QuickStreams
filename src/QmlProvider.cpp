@@ -172,8 +172,10 @@ quint64 quickstreams::qml::QmlProvider::totalActive() const {
 	return _provider->totalActive();
 }
 
-static void __register_quickstreams_qml_provider() {
+void __register_quickstreams_qml_provider() {
     qRegisterMetaType<quickstreams::qml::ExceptionTypeList>();
 }
 
+#ifndef QUICK_STREAM_DISABLE_AUTO_QML_REGISTER
 Q_COREAPP_STARTUP_FUNCTION(__register_quickstreams_qml_provider)
+#endif

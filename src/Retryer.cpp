@@ -7,6 +7,10 @@ quickstreams::Retryer::Retryer(qint32 maxTrials) :
 	_currentTrial(0)
 {}
 
+quickstreams::Retryer::~Retryer(){
+
+}
+
 void quickstreams::Retryer::Retryer::reset() {
 	_currentTrial = 0;
 }

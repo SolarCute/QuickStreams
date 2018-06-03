@@ -16,6 +16,7 @@ protected:
 
 public:
 	Retryer(qint32 maxTrials);
+    virtual ~Retryer();
 	void reset();
 	bool isInfinite() const;
 	bool isMaxReached() const;

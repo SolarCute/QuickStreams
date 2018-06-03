@@ -310,7 +310,7 @@ QString quickstreams::Error::message() const {
 	return _obj->message();
 }
 
-static void __register_quickstreams_qml_error_types() {
+void __register_quickstreams_qml_error_types() {
     qRegisterMetaType<quickstreams::exception::Exception*>();
 	qRegisterMetaType<quickstreams::exception::JsException*>();
 	qRegisterMetaType<quickstreams::exception::BadTypeId*>();
@@ -334,4 +334,6 @@ static void __register_quickstreams_qml_error_types() {
 	qRegisterMetaType<quickstreams::exception::SystemError*>();
 }
 
+#ifndef QUICK_STREAM_DISABLE_AUTO_QML_REGISTER
 Q_COREAPP_STARTUP_FUNCTION(__register_quickstreams_qml_error_types)
+#endif
