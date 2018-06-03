@@ -112,3 +112,5 @@ signals:
 };
 
 }} // quickstreams::qml
+
+void __register_quickstreams_qml_provider();

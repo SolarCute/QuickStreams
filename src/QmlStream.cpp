@@ -224,8 +224,10 @@ bool quickstreams::qml::QmlStream::isAborted() const {
 	return _reference->isAborted();
 }
 
-static void __register_quickstreams_qml_stream() {
+void __register_quickstreams_qml_stream() {
     qmlRegisterInterface<quickstreams::qml::QmlStream>("QmlStream");
 }
 
+#ifndef QUICK_STREAM_DISABLE_AUTO_QML_REGISTER
 Q_COREAPP_STARTUP_FUNCTION(__register_quickstreams_qml_stream)
+#endif
